@@ -1,8 +1,13 @@
 package com.trial;
 
+import com.trial.plane.Plane;
 import com.trial.plane.beans.Triangle;
 import com.trial.plane.beans.Square;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class AppTest {
 
@@ -36,12 +41,34 @@ public class AppTest {
                 .build();
 
 
-        // calculer l'air pour les squares et les triangles et les afficher dans la console
+        // calculer l'aire pour les squares et les triangles et les afficher dans la console
+        List<Plane> planeList = List.of(square1, square2, square3, shape, shape2);
+        
+        planeList.stream().map(Plane::areaCalc).forEach(System.out::println);
 
 
-        // Ici je voudrais filtrer les éléments qui ont une aires > 250 et les ajouter dans une listes pour l'afficher dans leurs types
-
-
-
+        // Ici je voudrais filtrer les éléments qui ont une aire > 250 et les ajouter dans une liste pour l'afficher dans leurs types
+        List<Plane> expectedPlaneList = planeList.stream()
+                .filter(plane -> plane.areaCalc() > 250)
+                .toList();
+        
+        expectedPlaneList.forEach(this::displayPlaneWithTypeInConsole);
+        
+        List<Triangle> expectedTriangleList = new ArrayList<>();
+        List<Square> expectedSquareList = new ArrayList<>();
+        
+        planeList.stream().filter(plane -> plane.areaCalc() > 250).forEach(plane -> {
+            if (plane instanceof Triangle) {
+                expectedTriangleList.add((Triangle) plane);
+            } else {
+                expectedSquareList.add((Square) plane);
+            }
+        });
+    }
+    
+    private void displayPlaneWithTypeInConsole(Plane plane) {
+        System.out.printf("type: %s - aire: %d%n",
+		        plane.getType(),
+		        plane.areaCalc());
     }
 }
