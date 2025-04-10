@@ -86,11 +86,11 @@ public class AppTest {
         Assertions.assertEquals(BigInteger.valueOf(7), root.getRight().getRight().getValue());
     }
 
-    public static void buildTree(final List<BigInteger> numbers, Node node) {
+    private static void buildTree(final List<BigInteger> numbers, Node node) {
 
     }
 
-    public int findOccurrenceElement(final String strElement, final String text) {
+    private static int findOccurrenceElement(final String strElement, final String text) {
         return 0;
     }
 
