@@ -44,11 +44,11 @@ public class AppTest {
 
 
         // Calculer l'aire pour les carrés et les triangles
-        // et afficher le résultat
+        // et afficher le résultat pour chaque instance
 
 
-        // Ici je voudrais filtrer les éléments qui ont une aire < 250
-        // Ensuite je voudrais afficher la taille de liste par type d'élément.
+        // Ici je voudrais filtrer les éléments qui ont une aire > 250
+        // Puis récupérer le nombre d'élément avec une aire > 250
 
     }
 
@@ -56,6 +56,7 @@ public class AppTest {
     public void find_pair_and_impair_number() {
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7);
 
+        // J'attend une map de Boolean, false pour les nombres impaires, et true pour les nombres pairs
         Map<Boolean, List<Integer>> partitionedNumbers = new HashMap<>();
 
         Assertions.assertEquals(4, partitionedNumbers.get(false).size());
@@ -67,7 +68,7 @@ public class AppTest {
         final String strElement = "pas";
         final String text = "Je crois avoir passé le chemin, mais je ne suis pas sûr";
 
-        // Ici je voudrais vérifier si le texte contient le mot search
+        // Ici je voudrais vérifier combien de fois il y a le mot "pas", et uniquement le mot "pas"
         Assertions.assertEquals(1, findOccurrenceElement(strElement, text));
     }
 
@@ -78,6 +79,7 @@ public class AppTest {
         Node root = new Node();
         root.setValue(BigInteger.valueOf(1));
 
+        // Je voudrais un code récursif qui construit mon arbre binaire. sachant que le noeud 1 est le noeud root.
         buildTree(numbers, root);
 
         Assertions.assertEquals(BigInteger.valueOf(2), root.getLeft().getValue());
