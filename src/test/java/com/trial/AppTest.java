@@ -91,7 +91,7 @@ public class AppTest {
     }
 
     public int findOccurrenceElement(final String strElement, final String text) {
-        return 1;
+        return 0;
     }
 
 
