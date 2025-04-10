@@ -14,8 +14,9 @@ import java.util.Map;
 public class AppTest {
 
     /*
-        Tout les exercices ici sont possibles en une seule lignes sauf pour l'exercice de l'arbre binaire.
+        Tout les exercices ici sont possibles en une seule ligne de code sauf pour l'exercice de l'arbre binaire.
         Pour l'arbre binaire, vous pouvez vous aidez de l'image dans le readme
+        Il faut modifier uniquement cette classe, et ne pas modifier les assertions.
     */
     @Test
     public void testApp() {
@@ -47,8 +48,8 @@ public class AppTest {
 
 
         // Calculer l'aire pour les carrés et les triangles
-        // et afficher le résultat pour chaque instance
-        
+        // et afficher le résultat pour chaque instance (System.out.println(**))
+
         
         // Ici je voudrais filtrer les éléments qui ont une aire > 250
         // Puis récupérer le nombre d'élément avec une aire > 250
