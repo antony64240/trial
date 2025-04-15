@@ -1,4 +1,4 @@
- /*
+
         Consignes pour ce test technique :
 
         1. **Exercice 1 : Calculer l'aire des formes géométriques**
@@ -50,6 +50,6 @@
             - Vous **ne devez modifier que cette classe**, et ne pas toucher aux assertions déjà présentes.
             - **Un seul exercice nécessite une solution plus complexe (l'arbre binaire)**, les autres exercices peuvent être résolus en une ou deux lignes de code.
 
-    */
+ 
 
 ![image](https://github.com/user-attachments/assets/cb78745a-c7a4-4619-acb4-887b65ee3ab4)
