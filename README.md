@@ -41,13 +41,15 @@
 - Vous avez une liste de nombres `BigInteger` et un nœud racine `Node`.
 - Votre tâche est de **construire un arbre binaire** de manière récursive, où chaque nombre de la liste est un nœud dans l'arbre.
 - Le nœud racine (root) doit être initialisé avec la valeur `1` et les autres nœuds doivent être insérés récursivement en fonction de leur valeur.
-- Vous pouvez vous référer à l'image dans le README pour avoir une idée de la structure attendue de l'arbre.
+- Vous pouvez vous référer à l'image dans pour avoir une idée de la structure d'un arbre binaire.
 - Utilisez les assertions suivantes pour vérifier la structure de l'arbre :
 
     ```java
     Assertions.assertEquals(BigInteger.valueOf(2), root.getLeft().getValue());
     Assertions.assertEquals(BigInteger.valueOf(7), root.getRight().getRight().getValue());
     ```
+
+![image](https://github.com/user-attachments/assets/cb78745a-c7a4-4619-acb4-887b65ee3ab4)
 
 ## 5. **Remarques importantes :**
 - Vous **ne devez modifier que cette classe**, et ne pas toucher aux assertions déjà présentes.
