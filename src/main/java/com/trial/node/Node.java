@@ -16,6 +16,11 @@ public class Node {
         this.right = right;
     }
 
+    public Node(BigInteger value) {
+        this.value = value;
+    }
+
+
     public BigInteger getValue() {
         return value;
     }

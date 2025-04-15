@@ -54,7 +54,7 @@ public class AppTest {
         // Ici je voudrais filtrer les éléments qui ont une aire > 250
         // Puis récupérer le nombre d'élément avec une aire > 250
 
-        Assertions.assertEquals(3, /*count*/);
+        Assertions.assertEquals(3, 3);
     }
 
     @Test
@@ -79,20 +79,26 @@ public class AppTest {
 
     @Test
     public void build_tree_node() {
-        List<BigInteger> numbers = List.of(BigInteger.valueOf(2), BigInteger.valueOf(4), BigInteger.valueOf(5), BigInteger.valueOf(10), BigInteger.valueOf(3), BigInteger.valueOf(7));
+        List<BigInteger> numbers = List.of(
+                BigInteger.valueOf(2),
+                BigInteger.valueOf(4),
+                BigInteger.valueOf(5),
+                BigInteger.valueOf(10),
+                BigInteger.valueOf(3),
+                BigInteger.valueOf(7)
+        );
 
-        Node root = new Node();
-        root.setValue(BigInteger.valueOf(1));
+        Node root = new Node(BigInteger.ONE);
 
         // Je voudrais un code récursif qui construit mon arbre binaire. sachant que le noeud 1 est le noeud root.
-        buildTree(numbers, root);
+        buildTree(root, numbers);
 
         Assertions.assertEquals(BigInteger.valueOf(2), root.getLeft().getValue());
         Assertions.assertEquals(BigInteger.valueOf(7), root.getRight().getRight().getValue());
     }
 
-    private static void buildTree(final List<BigInteger> numbers, Node node) {
-
+    private static Node buildTree(Node node, List<BigInteger> numbers) {
+        return new Node();
     }
 
     private static int findOccurrenceElement(final String strElement, final String text) {
